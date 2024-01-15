@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\livewire\Counter;
+use App\livewire\Todo;
+use App\livewire\ShowPosts;
+use App\livewire\CreatePost;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Counter::class);
+Route::get('/todo', Todo::class);
+Route::get('/posts', ShowPosts::class);
+Route::get('/create-post', CreatePost::class);
